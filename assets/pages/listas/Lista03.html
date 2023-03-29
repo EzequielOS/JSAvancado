@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let vet1 = [10,21,30,44];
+        let vet2 = ['Hoje', 'eh', 'quarta'];
+        //let vet2 = [' quarta', ' eh','Hoje'];
+
+
+        let vet1Dobro;
+
+        // undefined = o espaço está alocado mas sem atribuição de valor 
+        vet1Dobro = vet1.map(element => {if(element %2==0) return element*2});
+        console.log(vet1Dobro)
+
+
+        //retorna apenas posições pares     /// filter retorna elementos que atenderam a condição
+        let vetPares = vet1.filter(element => element %2==0);
+        console.log(vetPares);
+
+        let vetMaiores = vet1.filter(element => element >= 18);
+        console.log(vetMaiores);
+
+        // reduce reduz o vetor em um valor
+
+        let vetReduce = vet2.reduce((acc, element) => acc.concat(" ", element));
+        console.log(vetReduce);
+
+
+        ///////// Atividades 
+        let nomes = ["Wilton de Paula Filho", "Maria Jose da Silva", "Ana Maria"];
+
+         nomes.map(element => {
+            let vetWords = element.split(" ");
+            return vetWords[0].concat(" ", vetWords[vetWords.length-1]);
+        });
+
+        //function getFirstLastNames(nomes){
+          //  nome0 = nomes[0].split(" ");
+            //nome1 = nomes[1].split(" ");
+            //nome2 = nomes[2].split(" ");
+            //console.log(`${nome0[0].concat(' ')}${nome0[(nome0.length-1)]}`);
+            //console.log(`${nome1[0].concat(' ')}${nome1[(nome1.length-1)]}`);
+            //console.log(`${nome2[0].concat(' ')}${nome2[(nome2.length-1)]}`);
+        //}
+        //getFirstLastNames(nomes);
+
+        let vetor1 = [10, 4, 8, 7, 1, 20];
+
+        const somarImpares = (vet) => vet.filter(element => element%2==1).reduce((acc, element) => acc+element)
+
+        console.log(somarImpares(vetor1));
+    </script>
+</head>
+<body>
+    <p>Abra o console...</p>
+</body>
+</html>
